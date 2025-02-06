@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sensor Fusion: Optical Flow + IMU</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    video, canvas { border: 1px solid #ccc; display: block; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Sensor Fusion: Optical Flow and IMU</h1>
+  <video id="video" autoplay playsinline width="320" height="240"></video>
+  <canvas id="canvasOutput" width="320" height="240"></canvas>
+  <div>
+    <p id="displacement">Estimated Displacement: 0 m</p>
+    <p id="accelInfo">Acceleration: 0, 0, 0</p>
+    <p id="flowInfo">Optical Flow: 0, 0</p>
+  </div>
+  <!-- Include OpenCV.js (make sure to use a version that supports optical flow functions) -->
+  <script async src="https://docs.opencv.org/4.7.0/opencv.js" onload="onOpenCvReady();"></script>
+  <script src="app.js"></script>
+</body>
+</html>
